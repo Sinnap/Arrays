@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <!--
+    Jamie Collins
+    Assignment 8 project 2
+    Program counts the number of times a number is entered into an array of numbers and displays the total.
+-->
+    <script>
+        //function counts the reoccurring number 
+        function countOccurences(numArray, num) {
+
+            var count = 0;
+            for (var i = 0; i < numArray.length; i++) {
+                if (numArray[i]===num) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        //array of given numbers
+        var Array = [1, 2, 3, 4, 5, 44, 33, 4, 3, 2, 1];
+
+        //will display array elements and how many times 3 appears in the array
+        document.write("The number of times 3 occurs in [ "+ Array + " ] is "+ countOccurences(Array, 3));
+
+    </script>
+
+</head>
+
+<body>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

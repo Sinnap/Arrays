@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Series of integers</title>
+    <!--
+    Jamie Collins
+    Assignment 8 project 1
+    Program that asks user to enter numbers. 
+    Program uses loop to tell user what the entered numbers are positive and negative and what its totals are.
+-->
+    <script>
+        //prompts users for numbers and asks if they want to continue entering more numbers
+        var numbers = [];
+        var userPrompt = true;
+        while (userPrompt) {
+            var num = parseInt(prompt("please enter a positive or a negative number:?", " "));
+            numbers.push(num);
+            userPrompt = confirm("enter another number?");
+        }
+
+        /*for loop and if statment for negative numbers retrieved from the users array.
+        Tells the user there negative numbers by writing to the browser and its sum */
+        var negNum = 0;
+        document.write("you entered the folling negative integers: ")
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] < 0) {
+                negNum += numbers[i];
+                document.write(numbers[i] + ", ");
+            }
+
+        }
+        document.write("<br>sum of all negative integers is: " + negNum +
+            "<br>You enters the following positive integers ");
+
+
+        /*for loop and if statment for positive numbers retrieved from the users array.
+        Tells the user there posite numbers by writing to the browser and its sum */
+        var posNum = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] > 0) {
+                posNum += numbers[i];
+                document.write(numbers[i] + ", ");
+            }
+        }
+        document.write("<br>sum of all positive integers is: " + posNum + "<br>");
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
